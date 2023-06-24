@@ -1,11 +1,11 @@
 {
-  "name": "Inshorts News App",
+  "name": "MERN News App",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "",
