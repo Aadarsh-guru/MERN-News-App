@@ -194,9 +194,9 @@ function CreateNewsForm({ setCategoryTab, setTab }) {
                     <TextField placeholder='Enter Related Keywords Seprated by (",")' error={keywords && keywords?.length < 1 && true} onChange={(e) => setKeywords(e.target.value)} multiline minRows={5} label='Provide Related Keywords' />
                 </SEOInformaton>
                 <ActionBox>
-                    <Button type='submit' onClick={() => setType('bin')} sx={{ color: 'red', borderColor: 'red' }} variant='outlined' >{(loading && type === 'bin') ? 'Moving to bin.. ' : 'Move To Bin'}</Button>
-                    <Button type='submit' onClick={() => setType('draft')} sx={{ color: 'green', borderColor: 'green' }} variant='outlined' >{(loading && type === 'draft') ? 'saving draft..' : "Save Draft"}</Button>
-                    <Button type='submit' onClick={() => setType('publish')} variant='contained' >{(loading && type === 'publish') ? 'Publishing..' : 'Publish Now'}</Button>
+                    <Button disabled={loading && true} type='submit' onClick={() => setType('bin')} sx={{ color: 'red', borderColor: 'red' }} variant='outlined' >{(loading && type === 'bin') ? 'Moving to bin.. ' : 'Move To Bin'}</Button>
+                    <Button disabled={loading && true} type='submit' onClick={() => setType('draft')} sx={{ color: 'green', borderColor: 'green' }} variant='outlined' >{(loading && type === 'draft') ? 'saving draft..' : "Save Draft"}</Button>
+                    <Button disabled={loading && true} type='submit' onClick={() => setType('publish')} variant='contained' >{(loading && type === 'publish') ? 'Publishing..' : 'Publish Now'}</Button>
                 </ActionBox>
             </Form>
         </Container>
