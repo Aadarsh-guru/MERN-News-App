@@ -101,16 +101,16 @@ const News = () => {
                 <NewsDate >Date: {new Date(news?.createdAt).toDateString()}</NewsDate>
                 <Description>{news?.description}</Description>
                 <ShareIcons>
-                    <TwitterShareButton title='Twitter' url={`${window.location.href}`} >
+                    <TwitterShareButton title={news?.title} url={`${window.location.href}`} >
                         <Twitter />
                     </TwitterShareButton>
-                    <WhatsappShareButton title='WhatsApp' url={`${window.location.href}`} >
+                    <WhatsappShareButton title={news?.title} url={`${window.location.href}`} >
                         <WhatsApp />
                     </WhatsappShareButton>
-                    <LinkedinShareButton title='LinkedIn' url={`${window.location.href}`}>
+                    <LinkedinShareButton title={news?.title} url={`${window.location.href}`}>
                         <LinkedIn />
                     </LinkedinShareButton>
-                    <TelegramShareButton title='Telegram' url={`${window.location.href}`} >
+                    <TelegramShareButton title={news?.title} url={`${window.location.href}`} >
                         <Telegram />
                     </TelegramShareButton>
                 </ShareIcons>
